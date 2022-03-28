@@ -203,8 +203,8 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
 
     private final String ACTION_MODE_SEARCH_DIALOGS_TAG = "search_dialogs_action_mode";
 
-    private static class ViewPage extends FrameLayout {
-        private DialogsRecyclerView listView;
+    public static class ViewPage extends FrameLayout {
+        public DialogsRecyclerView listView;
         private LinearLayoutManager layoutManager;
         private DialogsAdapter dialogsAdapter;
         private ItemTouchHelper itemTouchhelper;
@@ -231,7 +231,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
     private ViewPagerFixed.TabsView searchTabsView;
     private float contactsAlpha = 1f;
     private ValueAnimator contactsAlphaAnimator;
-    private ViewPage[] viewPages;
+    public ViewPage[] viewPages;
     private FiltersView filtersView;
     private ActionBarMenuItem passcodeItem;
     private ActionBarMenuItem downloadsItem;
@@ -248,7 +248,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
     private FrameLayout floatingButtonContainer;
     private ChatAvatarContainer avatarContainer;
     private UndoView[] undoView = new UndoView[2];
-    private FilterTabsView filterTabsView;
+    public FilterTabsView filterTabsView;
     private boolean askingForPermissions;
     private RLottieDrawable passcodeDrawable;
     private SearchViewPager searchViewPager;

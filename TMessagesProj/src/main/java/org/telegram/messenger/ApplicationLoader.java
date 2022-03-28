@@ -355,15 +355,9 @@ public class ApplicationLoader extends Application {
         }
 
         // Since static init is thread-safe, no lock is needed there.
-        Utilities.stageQueue.postRunnable(() -> {
-            SignturesKt.checkMT(this);
-        });
-
-        try {
-            Class.forName("org.robolectric.android.internal.AndroidTestEnvironment");
-            return;
-        } catch (ClassNotFoundException ignored) {
-        }
+//        Utilities.stageQueue.postRunnable(() -> {
+//            SignturesKt.checkMT(this);
+//        });
 
         NativeLoader.initNativeLibs(ApplicationLoader.applicationContext);
         ConnectionsManager.native_setJava(false);
